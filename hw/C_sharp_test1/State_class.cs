@@ -8,6 +8,9 @@ namespace C_sharp_test1
 {
     public  class State
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public string ddesc { get; set; }
         public string nameZh { get; set; }
         public string departureZh { get; set; }
