@@ -13,6 +13,7 @@ namespace C_sharp_test1
         static void Main(string[] args)
         {
             var states = findState();
+            showState(states);
             /* 其中一項
             String URLString = " http://ibus.tbkc.gov.tw/xmlbus/StaticData/GetRoute.xml";
             XmlTextReader reader = new XmlTextReader(URLString);
@@ -85,11 +86,14 @@ namespace C_sharp_test1
             return States;
         }
 
-        /*static public void showState(List<State>states)
+        static public void showState(List<State> states)
         {
-            
-        }*/
-
+            Console.WriteLine(string.Format("共收到{0}筆監測站的資料", states.Count));
+            states.ForEach(x =>
+            {
+                Console.WriteLine(string.Format("編號 {0} , 路徑 {1},", x.nameZh, x.ddesc));
+            });
+        }
 
     }
 }
